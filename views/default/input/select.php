@@ -56,7 +56,7 @@ if ($options_values) {
 
 		$option_attrs = array(
 			'value' => $opt_value,
-			'selected' => in_array((string)$opt_value, $value),
+			'selected' => array_key_exists((string)$opt_value, $value),
 		);
 
 		$options_list .= elgg_format_element('option', $option_attrs, $option);
